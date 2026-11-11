@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.env
+
+# Generated model and metrics (DVC will track pipeline outputs)
+models/
+metrics.json
+
+# DVC local cache
+.dvc/cache/
