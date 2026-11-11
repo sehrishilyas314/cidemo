@@ -1,0 +1,27 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: data/iris.csv
+      hash: md5
+      md5: 500a0acbd112b7c512929eac892f9864
+      size: 4009
+    - path: src/train.py
+      hash: md5
+      md5: 5b41859fa67cd7aaaa70d82ac3338257
+      size: 2059
+    params:
+      params.yaml:
+        train.n_estimators: 100
+        train.random_state: 42
+        train.test_size: 0.2
+    outs:
+    - path: metrics.json
+      hash: md5
+      md5: 22a3ca52bd8afa43d753c5ba6a9cb471
+      size: 23
+    - path: models/iris_model.joblib
+      hash: md5
+      md5: 649205bd60605eec347a8ed32176b778
+      size: 168317
